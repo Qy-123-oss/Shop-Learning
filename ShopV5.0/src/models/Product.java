@@ -106,6 +106,7 @@ public class Product {
      * Builds a String representing a user friendly representation of the object state
      * @return Details of the specific product
      */
+    @Override
     public String toString()
     {
         return "Product description: " + productName

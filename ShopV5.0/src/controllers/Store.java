@@ -146,8 +146,9 @@ public class Store {
         if (!products.isEmpty()) {
             Product cheapestProduct = products.get(0);
             for (Product product : products) {
-                if (product.getUnitCost() < cheapestProduct.getUnitCost())
+                if (product.getUnitCost() < cheapestProduct.getUnitCost()) {
                     cheapestProduct = product;
+                }
             }
             return cheapestProduct;
         } else {
@@ -171,8 +172,9 @@ public class Store {
         } else {
             String listOfProducts = "";
             for (int i = 0; i < products.size(); i++) {
-                if (products.get(i).isInCurrentProductLine())
+                if (products.get(i).isInCurrentProductLine()) {
                     listOfProducts += i + ": " + products.get(i) + "\n";
+                }
             }
             if (listOfProducts.equals("")){
                 return "No Products are in our current product line";
@@ -219,8 +221,9 @@ public class Store {
         } else {
             String str = "";
             for (int i = 0; i < products.size(); i++) {
-                if (products.get(i).getUnitCost() > price)
+                if (products.get(i).getUnitCost() > price) {
                     str += i + ": " + products.get(i) + "\n";
+                }
             }
             if (str.equals("")) {
                 return "No products are more expensive than: " + price;
